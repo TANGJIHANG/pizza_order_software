@@ -16,7 +16,7 @@ void showMenu()
 	cout << "*******************************" << endl;
 	cout << "please input a number(1,2,3,or 0)" << endl;
 	cout << "*******************************" << endl;
-
+	
 }
 
 //one single pizza(categore)
@@ -108,8 +108,8 @@ void placeOrder(OrderQueue* queue)
 	cin >> toppings;
 	queue->pizzaArray[queue->orderCount].m_Toppings = toppings;
 	
-	queue->orderCount++;//先加一
-	calculatePrice(queue);//再计算价格
+	queue->orderCount++;//脧脠录脫脪禄
+	calculatePrice(queue);//脭脵录脝脣茫录脹赂帽
 	cout <<"the price is : "<< queue->pizzaArray[queue->orderCount-1].m_SinglePrice << endl;
 
 	system("pause");
@@ -136,7 +136,7 @@ void printOrder(OrderQueue* queue)
 			cout << "the toppings is :" << queue->pizzaArray[i].m_Toppings << endl;
 			cout << "the price is : " << queue->pizzaArray[i].m_SinglePrice << endl;
 			cout << "==============================" << endl;
-			
+			totalRevenue+=queue->pizzaArray[i].m_SinglePrice;
 		}
 		cout << "the total revenue is : " << totalRevenue << endl;
 	}
@@ -225,4 +225,5 @@ int main()
 
 	system("pause");
 	return 0;
+
 }
